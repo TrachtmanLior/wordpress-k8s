@@ -1,0 +1,12 @@
+mariadb:
+  enabled: false
+
+externalDatabase:
+  host: terraform-20250509224153917600000001.cer4w0u6i7ov.us-east-1.rds.amazonaws.com
+  user: admin
+  password: Password123!
+  database: wordpress
+  port: 3306
+
+service:
+  type: NodePort
