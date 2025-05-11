@@ -10,3 +10,4 @@ externalDatabase:
 
 service:
   type: NodePort
+# trigger sync
