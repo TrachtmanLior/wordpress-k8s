@@ -1,0 +1,21 @@
+name: ArgoCD WordPress Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - wordpress-values.yaml
+      - wordpress-argocd.yaml
+      - wordpress-helm/**
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Confirm push
+      run: echo "Config files updated — ArgoCD will auto-sync."
